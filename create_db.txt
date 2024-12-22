@@ -11,5 +11,5 @@ CREATE TABLE snapshots (
     hash CHAR(64),
     page_body TEXT,
     changes TEXT,
-    FOREIGN KEY (website_id) REFERENCES website(id) ON DELETE CASCADE
+    FOREIGN KEY (website_id) REFERENCES websites(id) ON DELETE CASCADE
 );
