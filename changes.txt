@@ -1,0 +1,13 @@
+@@ -2 +2 @@
+
+- <head>Testowa statyczna strona WWW na S3 Marcina Glowackiego</head>
++ <head>Super stronka Natalii Osińskiej</head>
+@@ -4,2 +4,2 @@
+
+- <p>Obrazek testowy</p>
+- <p><img src="cloud.png" alt="Moj obrazek testowy">
++ <p>Słodki Kiciuś</p>
++ <p><img src="kotek.jpg" alt="Kiciuś">
+@@ -7 +6,0 @@
+
+-</html>

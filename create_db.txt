@@ -1,0 +1,25 @@
+CREATE TABLE websites (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    url VARCHAR(255) NOT NULL,
+    last_hash CHAR(64)
+);
+
+CREATE TABLE snapshots (
+	daily_id INT AUTO_INCREMENT PRIMARY KEY,
+	website_id INT NOT NULL,
+    day date NOT NULL,
+    hash CHAR(64),
+    page_body TEXT,
+    changes TEXT,
+    FOREIGN KEY (website_id) REFERENCES website(id) ON DELETE CASCADE
+);
+
+############## not valid ##################
+CREATE TABLE snapshots (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    daily_id INT NOT NULL,
+    time TIME NOT NULL,
+    hash CHAR(64) NOT NULL,
+    last_change JSON NOT NULL,
+	FOREIGN KEY (daily_id) REFERENCES daily_snapshots(daily_id) ON DELETE CASCADE
+);
