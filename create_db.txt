@@ -13,13 +13,3 @@ CREATE TABLE snapshots (
     changes TEXT,
     FOREIGN KEY (website_id) REFERENCES website(id) ON DELETE CASCADE
 );
-
-############## not valid ##################
-CREATE TABLE snapshots (
-	id INT AUTO_INCREMENT PRIMARY KEY,
-    daily_id INT NOT NULL,
-    time TIME NOT NULL,
-    hash CHAR(64) NOT NULL,
-    last_change JSON NOT NULL,
-	FOREIGN KEY (daily_id) REFERENCES daily_snapshots(daily_id) ON DELETE CASCADE
-);
